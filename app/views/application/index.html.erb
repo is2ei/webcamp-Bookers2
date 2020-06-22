@@ -3,3 +3,8 @@
 <% if flash[:notice] %>
     <%= content_tag :p, flash[:notice], id: :notice %>
 <% end %>
+
+<%= link_to 'Log in', new_user_session_path %>
+<%= link_to 'Sign up', new_user_registration_path %>
+
+<p>User info</p>
