@@ -1,9 +1,12 @@
 <p>Bookers</p>
-<a href="#">Home</a>
-<a href="/home/about">About</a>
 <% if user_signed_in? %>
+    <%= link_to 'Home', user_path(current_user.id) %>
+    <%= link_to 'Users', users_path %>
+    <a href="/books">Books</a>
     <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
 <% else %>
+    <a href="/">Home</a>
+    <a href="/home/about">About</a>
     <a href="/users/sign_up">Sign up</a>
     <a href="/users/sign_in">Login</a>
 <% end %>

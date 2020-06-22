@@ -1,1 +1,5 @@
 <%= render '/header' %>
+
+<% if flash[:notice] %>
+    <%= content_tag :p, flash[:notice], id: :notice %>
+<% end %>
