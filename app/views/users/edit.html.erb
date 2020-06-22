@@ -1,0 +1,19 @@
+<p>User info</p>
+<%= form_with model: @user, local: true, url: user_path do |f| %>
+    <% if @user.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@user.errors.count, 'error') %> prohibited this user  from being saved:</h2>
+        </div>
+    <% end %>
+    <div class="field">
+        <%= f.label :name, 'Name' %>
+        <%= f.text_field :name %>
+    </div>
+    <div class="field">
+        <%= f.label :introduction, 'Introduction' %>
+        <%= f.text_field :introduction %>
+    </div>
+    <div class="actions">
+        <%= submit_tag('Update User') %>
+    </div>
+<% end %>

@@ -1,0 +1,10 @@
+<% if flash[:notice] %>
+    <%= content_tag :p, flash[:notice], id: :notice %>
+<% end %>
+
+<p>User info</p>
+<img class="profile_image">
+<%= current_user.name %>
+<%= current_user.introduction %>
+<%= link_to 'link', edit_user_path(current_user.id) %>
+<p>Books</p>

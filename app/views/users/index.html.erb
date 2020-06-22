@@ -1,0 +1,13 @@
+<%= render '/header' %>
+
+<table>
+    <thead>
+    </thead>
+    <tbody>
+        <% @users.each do |user| %>
+            <tr>
+                <td><%= link_to 'Show', user_path(user.id) %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
